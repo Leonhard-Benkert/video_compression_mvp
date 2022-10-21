@@ -1,0 +1,1 @@
+Add the video that is to be compressed in this folder and edit the filename in `src/main.py`. The output file will appear in this directory, its name can also be specified in `src/main.py`.

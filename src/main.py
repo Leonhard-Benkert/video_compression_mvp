@@ -31,7 +31,6 @@ while (True):
         break
 
 capture.release()
-cv2.destroyAllWindows()
 print(f"Time splitting: {round(time.time() - start_time_split, 4)}s")
 
 
@@ -40,8 +39,8 @@ print("Compressing video...")
 height, width, _ = images[0].shape # getting the frame size
 start_time_compression = time.time()
 
-cmd = generate_ffmpeg_cmd(height, width, fps, output_path, use_nvidia_gpu)
-pipe = Popen(cmd, stdin=PIPE) # opening a pipe with ffmpeg
+cmd = generate_ffmpeg_cmd(width, height, fps, output_path, use_nvidia_gpu)
+pipe = Popen(cmd, shell=False, stdin=PIPE) # opening a pipe with ffmpeg
 
 for image in images: # writing all frames to the pipe
     pipe.stdin.write(image.tobytes())
