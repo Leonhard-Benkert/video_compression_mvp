@@ -5,17 +5,17 @@ The repository is the minimum viable product that aims to compress a stream of i
 
 The people that worked on the research and the code are:
 
+- [Adrian Arthur Andersen](https://github.com/AdrianAndersen)
+- [Leonhard Benkert](https://github.com/Leonhard-Benkert)
 - [Sigurd Hauan](https://github.com/Siguhau)
 - [Ellen Yu](https://github.com/ellnyu)
-- [Adrian Arthur Andersen](https://github.com/AdrianAndersen)
 - Tuva Heggen Thiis
-- [Leonhard Benkert](https://github.com/Leonhard-Benkert)
 
 ## Setup
 The file `main.py` begins with a number of variables that need to be set for the project to run correctly. This includes the input and output paths (as relative paths within the project directory) as well as the GPU use. It is strongly recommended to put the files into the `assets` folder as no further ajustments to the `docker-compose` are necessary then.
 
 ## Run scrip with docker (recommended)
-Make sure to install docker on your computer ([MacOs](https://docs.docker.com/desktop/install/mac-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/)).
+Make sure to install docker on your computer ([MacOS](https://docs.docker.com/desktop/install/mac-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/)).
 
 After finishing the setup, run the following command in the project directory: 
 ``` bash
