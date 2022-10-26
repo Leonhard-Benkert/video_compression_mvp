@@ -1,7 +1,8 @@
 import cv2
 import os
 
-def get_framerate(path):
+
+def get_framerate(path: str) -> int:
     """
     returns the framerate of the video on given path
     :param path: absolute path to a video file
@@ -12,7 +13,7 @@ def get_framerate(path):
     return fps
 
 
-def generate_ffmpeg_cmd(frame_width, frame_height, video_fps, output_path, use_nvidia_gpu = False):
+def generate_ffmpeg_cmd(frame_width: int, frame_height: int, video_fps: int, output_path: str, use_nvidia_gpu=False) -> list[str]:
     """
     generates the command to use ffmpeg
     :param frame_width: number of pixels in the x-axis of the video
@@ -44,14 +45,14 @@ def generate_ffmpeg_cmd(frame_width, frame_height, video_fps, output_path, use_n
     ]
 
 
-def print_video_size_info(path_original, path_compressed):
+def print_video_size_info(path_original: str, path_compressed: str) -> None:
     '''
     prints the sizes of the original and compressed video as well as the compression ratio
     :param path_original: absolute path to the uncompressed video file
     :param path_compressed: absolute path to the uncompressed video file
     :return: None
     '''
-    def get_file_size(path):
+    def get_file_size(path: str) -> float:
         '''
          :param path: absolute path to the file
          :return: file size in mb

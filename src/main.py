@@ -2,6 +2,8 @@ from subprocess import Popen, PIPE
 import os
 import time
 import cv2
+import numpy as np
+
 from utils import get_framerate, print_video_size_info, generate_ffmpeg_cmd
 
 '''manual inputs'''
@@ -11,7 +13,7 @@ use_nvidia_gpu = False # todo set True if computer has a nvidia gpu and the corr
 
 
 '''setup'''
-images = [] # contains the images after splitting
+images: list[np.ndarray] = [] # contains the images after splitting
 project_dir = os.path.dirname(os.getcwd())
 input_path = os.path.join(project_dir, input_path_relative) # getting the absolute paths to input and output files
 output_path = os.path.join(project_dir, output_path_relative)
@@ -23,7 +25,7 @@ print("Splitting video...")
 start_time_split = time.time()
 capture = cv2.VideoCapture(input_path)
 
-while (True):
+while True:
     success, frame = capture.read() # reading induvidual frames from video
     if success:
         images.append(frame)
