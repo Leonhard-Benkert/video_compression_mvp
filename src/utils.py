@@ -39,6 +39,7 @@ def generate_ffmpeg_cmd(frame_width: int, frame_height: int, video_fps: int, out
         
         # output
         "-vcodec", codec,
+        "-preset", "fast"
         "-r", str(video_fps),
         "-pix_fmt", "bgr24",
         output_path
