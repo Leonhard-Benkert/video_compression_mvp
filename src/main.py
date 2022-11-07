@@ -7,9 +7,9 @@ import numpy as np
 from utils import get_framerate, print_video_size_info, generate_ffmpeg_cmd
 
 '''manual inputs'''
-input_path_relative = os.path.join("video_compression_mvp", "assets", "in.avi") # todo add video file to project folder and update filename
-output_path_relative = os.path.join("video_compression_mvp", "assets", "out.avi") # todo choose filename for output
-use_nvidia_gpu = True # todo set True if computer has a nvidia gpu and the correct sdk
+input_path_relative = "assets/in.avi" # todo add video file to project folder and update filename, update path for windows
+output_path_relative = "assets/out.avi" # todo choose filename for output, update path for windows
+use_nvidia_gpu = False # todo set True if computer has a nvidia gpu and the correct sdk
 
 
 '''setup'''
