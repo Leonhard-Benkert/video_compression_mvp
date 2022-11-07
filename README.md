@@ -14,6 +14,8 @@ The people that worked on the research and the code are:
 ## Setup
 The file `main.py` begins with a number of variables that need to be set for the project to run correctly. This includes the input and output paths (as relative paths within the project directory) as well as the GPU use. It is strongly recommended to put the files into the `assets` folder as no further ajustments to the `docker-compose` are necessary then.
 
+**Note:** The project repository does not a contain video file to be comoressed. It needs to be added manually into the assets folder under the name `in.avi`, other locations and names will require updated paths in `main.py`.
+
 ## Run scrip with docker
 Make sure to install docker on your computer ([MacOS](https://docs.docker.com/desktop/install/mac-install/), [Linux](https://docs.docker.com/desktop/install/linux-install/), [Windows](https://docs.docker.com/desktop/install/windows-install/)).
 

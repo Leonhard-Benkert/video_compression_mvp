@@ -26,7 +26,7 @@ def generate_ffmpeg_cmd(frame_width: int, frame_height: int, video_fps: int, out
     codec = "h264_nvenc" if use_nvidia_gpu else "h264"
     return [
         "ffmpeg",
-        "-loglevel", "error", # reduce console output by ffmpeg\
+        "-loglevel", "error", # reduce console output by ffmpeg
         "-y", # override output file if existent
         "-an", # specify that video does not have sound
         
