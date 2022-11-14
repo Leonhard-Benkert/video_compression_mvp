@@ -36,7 +36,8 @@ Other requirements can be installed with the following command:
 ``` bash
 $ pip3 install -r requirements.txt
 ```
-To run the script, execute the following command in the `src` directory:
+To run the script, execute the following commands:
 ``` bash
+$ cd src
 $ python3 main.py
 ```
